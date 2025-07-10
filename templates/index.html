@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function() {
+                alert('Our team will reach out to you shortly!');
+            });
+        }
+    });
+</script>
 <div class="form-container">
     <h2 class="text-center mb-4">Contact Us Form</h2>
     <form method="POST" action="{{ url_for('index') }}">
